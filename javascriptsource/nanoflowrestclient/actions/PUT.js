@@ -8,7 +8,7 @@
 import { Big } from "big.js";
 
 // BEGIN EXTRA CODE
-import { Request } from './RESTClient.js';
+import { DoRequest } from './RESTClient.js';
 // END EXTRA CODE
 
 /**
@@ -20,6 +20,6 @@ import { Request } from './RESTClient.js';
  */
 export async function PUT(url, body, headers, timeout) {
 	// BEGIN USER CODE
-	return Request(url, "PUT", body, headers, timeout);
+	return DoRequest(url, "PUT", body, headers, timeout);
 	// END USER CODE
 }

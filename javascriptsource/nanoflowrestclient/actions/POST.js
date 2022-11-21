@@ -8,7 +8,7 @@
 import { Big } from "big.js";
 
 // BEGIN EXTRA CODE
-import { Request } from './RESTClient.js';
+import { DoRequest } from './RESTClient.js';
 // END EXTRA CODE
 
 /**
@@ -18,8 +18,8 @@ import { Request } from './RESTClient.js';
  * @param {Big} timeout - The number of ms when the call should be aborted (no longer wait for a response). Note: this is disabled in native dev mode.
  * @returns {Promise.<MxObject>}
  */
-export async function PATCH(url, body, headers, timeout) {
+export async function POST(url, body, headers, timeout) {
 	// BEGIN USER CODE
-	return Request(url, "PATCH", body, headers, timeout);
+	return DoRequest(url, "POST", body, headers, timeout);
 	// END USER CODE
 }
